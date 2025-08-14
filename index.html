@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Manutenção Preventiva</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1, h2 { text-align: center; color: #333; }
+        .section { margin-bottom: 25px; border: 1px solid #ddd; padding: 20px; border-radius: 6px; }
+        .section h3 { margin-top: 0; color: #555; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .field { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #666; }
+        input[type="text"] { width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        .button-container { text-align: center; margin-top: 30px; }
+        button { padding: 12px 25px; font-size: 16px; color: #fff; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; }
+        button:hover { background-color: #0056b3; }
+        #signature-pad { border: 1px solid #000; background-color: #fff; margin-bottom: 10px; cursor: crosshair; }
+        .signature-buttons { display: flex; justify-content: center; gap: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Relatório de Manutenção Preventiva</h1>
+        <div class="section">
+            <h2>Switches Datacenter</h2>
+            <h3>Switches datacenter 1</h3>
+            <div class="field">
+                <label for="dc1-temp">Temperatura</label>
+                <input type="text" id="dc1-temp" name="dc1-temp">
+            </div>
+            <div class="field">
+                <label for="dc1-cpu">Uso CPU</label>
+                <input type="text" id="dc1-cpu" name="dc1-cpu">
+            </div>
+            <div class="field">
+                <label for="dc1-err">Interfaces com err-disable</label>
+                <input type="text" id="dc1-err" name="dc1-err">
+            </div>
+            <div class="field">
+                <label for="dc1-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="dc1-rede" name="dc1-rede">
+            </div>
+            <hr>
+            <h3>Switches datacenter 2</h3>
+            <div class="field">
+                <label for="dc2-temp">Temperatura</label>
+                <input type="text" id="dc2-temp" name="dc2-temp">
+            </div>
+            <div class="field">
+                <label for="dc2-cpu">Uso CPU</label>
+                <input type="text" id="dc2-cpu" name="dc2-cpu">
+            </div>
+            <div class="field">
+                <label for="dc2-err">Interfaces com err-disable</label>
+                <input type="text" id="dc2-err" name="dc2-err">
+            </div>
+            <div class="field">
+                <label for="dc2-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="dc2-rede" name="dc2-rede">
+            </div>
+        </div>
+        <div class="section">
+            <h2>1º Andar</h2>
+            <h3>1º Andar - Switch 1</h3>
+            <div class="field">
+                <label for="a1s1-temp">Temperatura</label>
+                <input type="text" id="a1s1-temp" name="a1s1-temp">
+            </div>
+            <div class="field">
+                <label for="a1s1-cpu">Uso CPU</label>
+                <input type="text" id="a1s1-cpu" name="a1s1-cpu">
+            </div>
+            <div class="field">
+                <label for="a1s1-err">Interfaces com err-disable</label>
+                <input type="text" id="a1s1-err" name="a1s1-err">
+            </div>
+            <div class="field">
+                <label for="a1s1-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a1s1-rede" name="a1s1-rede">
+            </div>
+            <hr>
+            <h3>1º Andar - Switch 2</h3>
+            <div class="field">
+                <label for="a1s2-temp">Temperatura</label>
+                <input type="text" id="a1s2-temp" name="a1s2-temp">
+            </div>
+            <div class="field">
+                <label for="a1s2-cpu">Uso CPU</label>
+                <input type="text" id="a1s2-cpu" name="a1s2-cpu">
+            </div>
+            <div class="field">
+                <label for="a1s2-err">Interfaces com err-disable</label>
+                <input type="text" id="a1s2-err" name="a1s2-err">
+            </div>
+            <div class="field">
+                <label for="a1s2-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a1s2-rede" name="a1s2-rede">
+            </div>
+            <hr>
+            <h3>1º Andar - Switch 3</h3>
+            <div class="field">
+                <label for="a1s3-temp">Temperatura</label>
+                <input type="text" id="a1s3-temp" name="a1s3-temp">
+            </div>
+            <div class="field">
+                <label for="a1s3-cpu">Uso CPU</label>
+                <input type="text" id="a1s3-cpu" name="a1s3-cpu">
+            </div>
+            <div class="field">
+                <label for="a1s3-err">Interfaces com err-disable</label>
+                <input type="text" id="a1s3-err" name="a1s3-err">
+            </div>
+            <div class="field">
+                <label for="a1s3-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a1s3-rede" name="a1s3-rede">
+            </div>
+        </div>
+        <div class="section">
+            <h2>2º Andar</h2>
+            <h3>2º Andar - Switch 1</h3>
+            <div class="field">
+                <label for="a2s1-temp">Temperatura</label>
+                <input type="text" id="a2s1-temp" name="a2s1-temp">
+            </div>
+            <div class="field">
+                <label for="a2s1-cpu">Uso CPU</label>
+                <input type="text" id="a2s1-cpu" name="a2s1-cpu">
+            </div>
+            <div class="field">
+                <label for="a2s1-err">Interfaces com err-disable</label>
+                <input type="text" id="a2s1-err" name="a2s1-err">
+            </div>
+            <div class="field">
+                <label for="a2s1-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a2s1-rede" name="a2s1-rede">
+            </div>
+            <hr>
+            <h3>2º Andar - Switch 2</h3>
+            <div class="field">
+                <label for="a2s2-temp">Temperatura</label>
+                <input type="text" id="a2s2-temp" name="a2s2-temp">
+            </div>
+            <div class="field">
+                <label for="a2s2-cpu">Uso CPU</label>
+                <input type="text" id="a2s2-cpu" name="a2s2-cpu">
+            </div>
+            <div class="field">
+                <label for="a2s2-err">Interfaces com err-disable</label>
+                <input type="text" id="a2s2-err" name="a2s2-err">
+            </div>
+            <div class="field">
+                <label for="a2s2-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a2s2-rede" name="a2s2-rede">
+            </div>
+            <hr>
+            <h3>2º Andar - Switch 3</h3>
+            <div class="field">
+                <label for="a2s3-temp">Temperatura</label>
+                <input type="text" id="a2s3-temp" name="a2s3-temp">
+            </div>
+            <div class="field">
+                <label for="a2s3-cpu">Uso CPU</label>
+                <input type="text" id="a2s3-cpu" name="a2s3-cpu">
+            </div>
+            <div class="field">
+                <label for="a2s3-err">Interfaces com err-disable</label>
+                <input type="text" id="a2s3-err" name="a2s3-err">
+            </div>
+            <div class="field">
+                <label for="a2s3-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a2s3-rede" name="a2s3-rede">
+            </div>
+        </div>
+        <div class="section">
+            <h2>3º Andar</h2>
+            <h3>3º Andar - Switch 1</h3>
+            <div class="field">
+                <label for="a3s1-temp">Temperatura</label>
+                <input type="text" id="a3s1-temp" name="a3s1-temp">
+            </div>
+            <div class="field">
+                <label for="a3s1-cpu">Uso CPU</label>
+                <input type="text" id="a3s1-cpu" name="a3s1-cpu">
+            </div>
+            <div class="field">
+                <label for="a3s1-err">Interfaces com err-disable</label>
+                <input type="text" id="a3s1-err" name="a3s1-err">
+            </div>
+            <div class="field">
+                <label for="a3s1-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a3s1-rede" name="a3s1-rede">
+            </div>
+            <hr>
+            <h3>3º Andar - Switch 2</h3>
+            <div class="field">
+                <label for="a3s2-temp">Temperatura</label>
+                <input type="text" id="a3s2-temp" name="a3s2-temp">
+            </div>
+            <div class="field">
+                <label for="a3s2-cpu">Uso CPU</label>
+                <input type="text" id="a3s2-cpu" name="a3s2-cpu">
+            </div>
+            <div class="field">
+                <label for="a3s2-err">Interfaces com err-disable</label>
+                <input type="text" id="a3s2-err" name="a3s2-err">
+            </div>
+            <div class="field">
+                <label for="a3s2-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a3s2-rede" name="a3s2-rede">
+            </div>
+            <hr>
+            <h3>3º Andar - Switch 3</h3>
+            <div class="field">
+                <label for="a3s3-temp">Temperatura</label>
+                <input type="text" id="a3s3-temp" name="a3s3-temp">
+            </div>
+            <div class="field">
+                <label for="a3s3-cpu">Uso CPU</label>
+                <input type="text" id="a3s3-cpu" name="a3s3-cpu">
+            </div>
+            <div class="field">
+                <label for="a3s3-err">Interfaces com err-disable</label>
+                <input type="text" id="a3s3-err" name="a3s3-err">
+            </div>
+            <div class="field">
+                <label for="a3s3-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a3s3-rede" name="a3s3-rede">
+            </div>
+        </div>
+        <div class="section">
+            <h2>4º Andar</h2>
+            <h3>4º Andar - Switch 1</h3>
+            <div class="field">
+                <label for="a4s1-temp">Temperatura</label>
+                <input type="text" id="a4s1-temp" name="a4s1-temp">
+            </div>
+            <div class="field">
+                <label for="a4s1-cpu">Uso CPU</label>
+                <input type="text" id="a4s1-cpu" name="a4s1-cpu">
+            </div>
+            <div class="field">
+                <label for="a4s1-err">Interfaces com err-disable</label>
+                <input type="text" id="a4s1-err" name="a4s1-err">
+            </div>
+            <div class="field">
+                <label for="a4s1-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a4s1-rede" name="a4s1-rede">
+            </div>
+            <hr>
+            <h3>4º Andar - Switch 2</h3>
+            <div class="field">
+                <label for="a4s2-temp">Temperatura</label>
+                <input type="text" id="a4s2-temp" name="a4s2-temp">
+            </div>
+            <div class="field">
+                <label for="a4s2-cpu">Uso CPU</label>
+                <input type="text" id="a4s2-cpu" name="a4s2-cpu">
+            </div>
+            <div class="field">
+                <label for="a4s2-err">Interfaces com err-disable</label>
+                <input type="text" id="a4s2-err" name="a4s2-err">
+            </div>
+            <div class="field">
+                <label for="a4s2-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a4s2-rede" name="a4s2-rede">
+            </div>
+            <hr>
+            <h3>4º Andar - Switch 3</h3>
+            <div class="field">
+                <label for="a4s3-temp">Temperatura</label>
+                <input type="text" id="a4s3-temp" name="a4s3-temp">
+            </div>
+            <div class="field">
+                <label for="a4s3-cpu">Uso CPU</label>
+                <input type="text" id="a4s3-cpu" name="a4s3-cpu">
+            </div>
+            <div class="field">
+                <label for="a4s3-err">Interfaces com err-disable</label>
+                <input type="text" id="a4s3-err" name="a4s3-err">
+            </div>
+            <div class="field">
+                <label for="a4s3-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a4s3-rede" name="a4s3-rede">
+            </div>
+            <hr>
+            <h3>4º Andar - Switch 4</h3>
+            <div class="field">
+                <label for="a4s4-temp">Temperatura</label>
+                <input type="text" id="a4s4-temp" name="a4s4-temp">
+            </div>
+            <div class="field">
+                <label for="a4s4-cpu">Uso CPU</label>
+                <input type="text" id="a4s4-cpu" name="a4s4-cpu">
+            </div>
+            <div class="field">
+                <label for="a4s4-err">Interfaces com err-disable</label>
+                <input type="text" id="a4s4-err" name="a4s4-err">
+            </div>
+            <div class="field">
+                <label for="a4s4-rede">Pontos de rede OK (%)</label>
+                <input type="text" id="a4s4-rede" name="a4s4-rede">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Assinatura do Técnico</h2>
+            <div class="field">
+                <label for="analista-nome">Nome do Analista</label>
+                <input type="text" id="analista-nome" name="analista-nome">
+            </div>
+            <p>Use o mouse ou o dedo para assinar no campo abaixo.</p>
+            <canvas id="signature-pad" width="400" height="200"></canvas>
+            <div class="signature-buttons">
+                <button id="clear-signature">Limpar Assinatura</button>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button onclick="gerarPDF()">Gerar e Salvar PDF</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+    const canvas = document.getElementById('signature-pad');
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    ctx.strokeStyle = '#000';
+    ctx.lineWidth = 2;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+
+    function draw(e) {
+        if (!isDrawing) return;
+        const rect = canvas.getBoundingClientRect();
+        const x = (e.clientX || e.touches[0].clientX) - rect.left;
+        const y = (e.clientY || e.touches[0].clientY) - rect.top;
+
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+
+        [lastX, lastY] = [x, y];
+    }
+
+    canvas.addEventListener('mousedown', (e) => {
+        isDrawing = true;
+        const rect = canvas.getBoundingClientRect();
+        [lastX, lastY] = [(e.clientX - rect.left), (e.clientY - rect.top)];
+    });
+
+    canvas.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        isDrawing = true;
+        const rect = canvas.getBoundingClientRect();
+        [lastX, lastY] = [(e.touches[0].clientX - rect.left), (e.touches[0].clientY - rect.top)];
+    });
+
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('touchmove', draw);
+
+    canvas.addEventListener('mouseup', () => isDrawing = false);
+    canvas.addEventListener('touchend', () => isDrawing = false);
+    canvas.addEventListener('mouseout', () => isDrawing = false);
+
+    document.getElementById('clear-signature').addEventListener('click', () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });
+
+    function gerarPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        function adicionarCabecalho(doc) {
+            doc.setFontSize(18);
+            doc.text("Relatório de Manutenção Preventiva", 10, 15);
+            doc.setFontSize(12);
+            doc.setDrawColor(0); // Cor da linha (preto)
+            doc.line(10, 25, 200, 25); // Linha abaixo do cabeçalho
+        }
+
+        adicionarCabecalho(doc);
+
+        let y = 30;
+
+        function adicionarSecao(titulo, prefixo) {
+            if (y > 270) {
+                doc.addPage();
+                adicionarCabecalho(doc); // Adiciona o cabeçalho na nova página
+                y = 30; // Reseta a posição Y para a nova página
+            }
+            
+            doc.setFontSize(14);
+            doc.text(titulo, 15, y);
+            y += 10;
+            
+            doc.setFontSize(12);
+            const temp = document.getElementById(prefixo + '-temp').value;
+            const cpu = document.getElementById(prefixo + '-cpu').value;
+            const err = document.getElementById(prefixo + '-err').value;
+            const rede = document.getElementById(prefixo + '-rede').value;
+            
+            doc.text(`- Temperatura: ${temp}`, 20, y);
+            doc.text(`- Uso CPU: ${cpu}`, 20, y + 6);
+            doc.text(`- Interfaces com err-disable: ${err}`, 20, y + 12);
+            doc.text(`- Pontos de rede OK (%): ${rede}`, 20, y + 18);
+            y += 28;
+        }
+
+        adicionarSecao('Switches datacenter 1', 'dc1');
+        adicionarSecao('Switches datacenter 2', 'dc2');
+        adicionarSecao('1º Andar - Switch 1', 'a1s1');
+        adicionarSecao('1º Andar - Switch 2', 'a1s2');
+        adicionarSecao('1º Andar - Switch 3', 'a1s3');
+        adicionarSecao('2º Andar - Switch 1', 'a2s1');
+        adicionarSecao('2º Andar - Switch 2', 'a2s2');
+        adicionarSecao('2º Andar - Switch 3', 'a2s3');
+        adicionarSecao('3º Andar - Switch 1', 'a3s1');
+        adicionarSecao('3º Andar - Switch 2', 'a3s2');
+        adicionarSecao('3º Andar - Switch 3', 'a3s3');
+        adicionarSecao('4º Andar - Switch 1', 'a4s1');
+        adicionarSecao('4º Andar - Switch 2', 'a4s2');
+        adicionarSecao('4º Andar - Switch 3', 'a4s3');
+        adicionarSecao('4º Andar - Switch 4', 'a4s4');
+        
+        if (y > 200) {
+            doc.addPage();
+            adicionarCabecalho(doc);
+            y = 30;
+        }
+
+        const nomeAnalista = document.getElementById('analista-nome').value;
+        doc.text(`Nome do Analista: ${nomeAnalista}`, 15, y);
+        y += 10;
+        
+        doc.text("Assinatura do Técnico:", 15, y);
+        y += 5;
+        const imageData = canvas.toDataURL('image/png');
+        doc.addImage(imageData, 'PNG', 20, y, 100, 50);
+
+        doc.save("relatorio-manutencao.pdf");
+    }
+</script>       
+</body>
+</html>
