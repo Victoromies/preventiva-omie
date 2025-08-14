@@ -465,17 +465,23 @@
             
             // Adiciona a assinatura ao PDF
             if (y > 200) {
-                doc.addPage();
-                adicionarCabecalho(doc);
-                y = 30;
-            }
-            doc.text("Assinatura do Técnico:", 15, y);
-            y += 5;
-            const imageData = canvas.toDataURL('image/png');
-            doc.addImage(imageData, 'PNG', 20, y, 100, 50);
-
-            doc.save("relatorio-manutencao.pdf");
+            doc.addPage();
+            adicionarCabecalho(doc);
+            y = 30;
         }
+
+        const nomeAnalista = document.getElementById('analista-nome').value;
+        doc.text(`Nome do Analista: ${nomeAnalista}`, 15, y);
+        y += 10;
+        
+        doc.text("Assinatura do Técnico:", 15, y);
+        y += 5;
+        const imageData = canvas.toDataURL('image/png');
+        doc.addImage(imageData, 'PNG', 20, y, 100, 50);
+
+        doc.save("relatorio-manutencao.pdf");
+    }
     </script>
 </body>
 </html>
+
